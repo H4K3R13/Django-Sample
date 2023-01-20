@@ -1,0 +1,12 @@
+<a href="{% url 'create_course' %}">Create New Course</a></li>
+
+{% if courses_list %}
+  <ul>
+  {% for course in courses_list %}
+    <li>{{ course.name }} -- <a href="course/{{ course.id }}">View Details</a></li> -->
+    <li>{{ course.name }} -- <a href="% url 'detail' course.id %">View Details</a></li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No courses are available.</p>
+{% endif %}
