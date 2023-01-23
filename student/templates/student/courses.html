@@ -1,4 +1,20 @@
-<a href="{% url 'create_course' %}">Create New Course</a></li>
+<!--<a href="{% url 'create_course' %}">Create New Course</a></li>-->
+
+ {% if user.is_authenticated %}
+  <div style="margin-left: 500px;">
+    <span>Hello {{ user.username }}!</span>
+    <p><a href="{% url 'logout' %}">Log Out</a></p>
+  </div>
+  
+  
+  {% else %}
+    <p>You are not logged in</p>
+    <a herf="{% url 'login' %}"> Log In</a>
+  {% endif %}
+
+<br>
+<a href="{% url 'create_course' %}">Create New Courses</a>
+
 
 {% if courses_list %}
   <ul>
