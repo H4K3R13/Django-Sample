@@ -2,6 +2,7 @@
 # Simple Django WebApp
 
 Simple student management system.
+*fixed some bugs.
 
 
 ## Run Locally
