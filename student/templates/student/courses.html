@@ -5,8 +5,8 @@
   {% for course in courses_list %}
     <!--<li>{{ course.name }} -- <a href="course/{{ course.id }}">View Details</a></li> -->
     <li>{{ course.name }}
-                          -- <a href="% url 'detail' course.id %">View Details</a>
-                          -- <a href="% url 'edit_course' course.id %">Edit</a>
+                          -- <a href="{% url 'detail' course.id %}">View Details</a>
+                          -- <a href="{% url 'edit_course' course.id %}">Edit</a>
     </li>
 
   {% endfor %}

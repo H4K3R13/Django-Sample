@@ -48,5 +48,6 @@ class CourseUpdateView(UpdateView):
     fields = "__all__"
     template_name_suffix ='_update_form'
     pk_url_kwarg='course_id'
+    
     def get_success_url(self):
         return reverse('detail', kwargs={'course_id': self.object.pk})
